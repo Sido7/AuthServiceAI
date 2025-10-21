@@ -1,1 +1,1 @@
-{"root":["./src/index.ts","./src/config/db.connection.ts","./src/entity/user.entity.ts"],"version":"5.9.2"}
+{"root":["./src/index.ts","./src/config/db.connection.ts","./src/config/redis.config.ts","./src/controller/auth.controller.ts","./src/entity/user.entity.ts","./src/routes/index.ts","./src/routes/user.routes.ts","./src/services/auth.service.ts","./src/services/redis.service.ts"],"version":"5.9.2"}
