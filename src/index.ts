@@ -12,6 +12,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 app.get('/', (req: Request, res: Response) => {
     res.status(200).json({ message: 'User Service is running.', dbStatus: 'Pending' });
 });
@@ -20,7 +24,7 @@ app.use('/v1', routes)
 
 
 
-const Port  = process.env.port || 3001
+const Port  = process.env.port || 4002
 app.listen(Port, async () => {
     await AppDataSource.initialize();
     console.log(`⚡ Server listening on port ${Port}`);
